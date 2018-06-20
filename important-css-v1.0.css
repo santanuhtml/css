@@ -1,0 +1,267 @@
+/*
+-----------------------------------------------------
+ CSS INDEX
+==========================
+1.core css
+2.overlay
+3.transition
+4.anchor tag
+5.form
+6.radio active
+7.button
+8.shadow
+9.background-image
+10.background-color with image
+11.title underline
+12.after & before css
+13.responsive
+14.on hover dropdown menu open
+-----------------------------------------------------
+*/
+/*
+-------------------------------------
+1.core css
+-------------------------------------
+*/
+html {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  width: 100%;
+  height: 100%;
+}
+body{
+  width: 100%;
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  line-height: 1.5;
+}
+h1,h2,h3,h4,h5,h6{
+  margin: 0px;
+}
+.img-responsive {
+  width: 100%;
+}
+
+/*
+-------------------------------------
+2.overlay
+-------------------------------------
+*/
+.overlay {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+/*
+-------------------------------------
+3.transition
+-------------------------------------
+*/
+a,.btn,
+a:hover,
+a:focus,.transition, #back-to-top:hover {
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+}
+
+/*
+-------------------------------------
+4.anchor tag
+-------------------------------------
+*/
+a{
+  text-decoration: none;
+  color: #2dcc70;
+}
+a:hover,
+a:focus {
+  text-decoration: none;
+  color: #2dcc70;
+}
+
+/*
+-------------------------------------
+5.form
+-------------------------------------
+*/
+.form-group .form-control:focus {
+  outline: none;
+  box-shadow: none;
+  background: #fff;
+  border-color: #2dcc70;
+}
+.form-control {
+  padding: 12px 20px;
+  height: 44px;
+}
+
+/*
+-------------------------------------
+6.radio active
+-------------------------------------
+*/
+.feedback-modal label > input:checked + img {
+  border: 2px solid #fb9928;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+/*
+-------------------------------------
+7.button
+-------------------------------------
+*/
+.btn{
+  border-radius: 0px;
+  padding: 8px 30px;
+}
+.btn-primary {
+  background-color: #8a1f53;
+  border-color: #751a46;
+}
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #751a46;
+  border-color: #60163a;
+  outline: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/*
+-------------------------------------
+8.shadow
+-------------------------------------
+*/
+.img-shadow{
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+/*
+-------------------------------------
+9.background-image
+-------------------------------------
+*/
+.background-image{
+  padding-top: 90px; 
+  padding-bottom: 90px;
+  background-position: center center;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-attachment: fixed;
+}
+
+/*
+-------------------------------------
+10.background-color with image
+note:image will be small;
+-------------------------------------
+*/
+.background-img-color{
+  background-color: #413a86;
+  background-image: url(../../img/video-bg.png);
+  -webkit-background-size: 320px 121px;
+  background-size: 320px 121px;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+/* set a image properly from bg */
+.nav-arc{
+  position: absolute;
+  bottom: -42px;
+  background-image: url(../img/nav-arc.png);
+  background-repeat: repeat-x;
+  -webkit-background-size: 1700px 56px;
+  background-size: 1700px 56px;
+  background-position: center;
+  padding-bottom: 50px;
+  width: 100%;
+}
+
+/*
+-------------------------------------
+11.title underline
+html:
+<h2 class="title-underline">
+  Your Title
+</h2>
+-------------------------------------
+*/
+h2.title-underline {
+  margin-bottom: 20px;
+  position: relative;
+}
+h2.title-underline:after {
+  content: " ";
+  display: block;
+  background: #b20d13;
+  height: 3px;
+  width: 50px;
+  margin-top: 10px;
+}
+/*
+--------------------
+Note:to keep center title & underline
+html:
+<h2 class="title-underline title-center">
+  Your Title
+</h2>
+--------------------
+*/
+.title-center {
+  text-align: center;
+  position: relative;
+}
+.title-center:after {
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+/*
+-------------------------------------
+12.after & before css
+html:
+<ul class="add-icon">
+  <li>text1</li>
+  <li>text2</li>
+  <li>text3</li>
+</ul>
+-------------------------------------
+*/
+.add-icon li:before {
+  /*font-family: FontAwesome;
+  content: "\f105";*/
+  content:url('img/angle-right.svg');
+  background-size: 10px 20px;
+  display: inline-block;
+  padding-right: 3px;
+  vertical-align: middle;
+}
+
+/*
+-------------------------------------
+13.responsive
+-------------------------------------
+*/
+@media only screen and (max-width: 767px){
+}
+
+/*
+-------------------------------------
+14.on hover dropdown menu open
+-------------------------------------
+*/
+@media (min-width: 768px) {
+  ul.nav li:hover > ul.dropdown-menu {
+    display: block;
+  }
+}
+
