@@ -16,7 +16,6 @@
 12.after & before css
 13.responsive
 14.on hover dropdown menu open
-15.Tab linking
 -----------------------------------------------------
 */
 /*
@@ -265,79 +264,3 @@ html:
     display: block;
   }
 }
-
-/*
--------------------------------------
-15.Tab linking
--------------------------------------
-*/
-
-This is the link:
-[code]
-
-<a href="work.php#socialmedia"><div class="upper-box">
-
-redirect to this tab link where page name is => 'work.php'
-[code]
-
-<li data-filter="1" class="button1"><a href="#logo">Logo Design</a></li> 
-<li data-filter="2" class="button1"><a href="#stationary">Stationary</a></li>
-<li data-filter="3" class="button1"><a href="#packagingdesign">Packaging Design</a></li>
-<li data-filter="4" class="button1"><a href="#socialmedia">Social Media</a></li>
-
-Add this js:
-[code]
-
-<script>    
-    jQuery(document).ready(() => {
-  let url = location.href.replace(/\/$/, "");
-
-  if (location.hash) {
-    const hash = url.split("#");
-    jQuery('#myTab a[href="#'+hash[1]+'"]').tab("show");
-    url = location.href.replace(/\/#/, "#");
-    history.replaceState(null, null, url);
-    setTimeout(() => {
-      jQuery(window).scrollTop(0);
-    }, 400);
-  }
-  
-  jQuery('a[data-toggle="tab"]').on("click", function() {
-    let newUrl;
-    const hash = jQuery(this).attr("href");
-    if(hash == "#home") {
-      newUrl = url.split("#")[0];
-    } else {
-      newUrl = url.split("#")[0] + hash;
-    }
-    newUrl += "/";
-    history.replaceState(null, null, newUrl);
-  });
-});
-</script>
-
-/*
--------------------------------------
-16.logo change with scroll
--------------------------------------
-*/
-/* --- HTML  ---- */
-<a class="navbar-brand visible-xs" href="index.php">
-   <img src="img/logo.png" class="img-responsive">
-</a>
-<a class="navbar-brand hidden-xs" href="index.php">
-  <img src="img/logo-footer.png" class="main-logo transition img-responsive">
-</a>
-
-/* --- js--- */
-<script type="text/javascript">
-   $(window).scroll(function(){
-     var wscroll = $(this).scrollTop();
-     if(wscroll > 10){
-      $('.main-logo').attr("src", "img/logo.png");
-     }
-     else{
-        $('.main-logo').attr("src", "img/logo-footer.png");
-     }
-   });
-</script>
