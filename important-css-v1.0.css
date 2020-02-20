@@ -16,6 +16,7 @@
 12.after & before css
 13.responsive
 14.on hover dropdown menu open
+15.over text with...
 -----------------------------------------------------
 */
 /*
@@ -310,4 +311,16 @@ html:
   ul.nav li:hover > ul.dropdown-menu {
     display: block;
   }
+}
+
+/*
+-------------------------------------
+15.over text with...
+-------------------------------------
+*/
+.news-box .content h4 {
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
