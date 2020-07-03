@@ -17,6 +17,7 @@
 13.responsive
 14.on hover dropdown menu open
 15.over text with...
+16.Test Shadow
 -----------------------------------------------------
 */
 /*
@@ -323,4 +324,13 @@ html:
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+}
+
+/*
+-------------------------------------
+16.Test Shadow
+-------------------------------------
+*/
+.main-banner h2 {
+ text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
