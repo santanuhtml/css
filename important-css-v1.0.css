@@ -295,14 +295,18 @@ html:
   vertical-align: middle;
 }
 after{
-	  position: absolute;
-	  background-image: url('../img/dotted-pattern.png');
-    background-size: 100px 100px;
-    display: inline-block;
-    width: 100px; 
-    height: 100px;
-    content:"";
-	}
+position: absolute;
+background-image: url('../img/dotted-pattern.png');
+background-size: 100px 100px;
+display: inline-block;
+width: 100px; 
+height: 100px;
+content:"";
+}
+
+&:last-child:after{
+  display: none;
+}
 /*
 -------------------------------------
 13.responsive
