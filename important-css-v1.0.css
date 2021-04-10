@@ -45,6 +45,24 @@ h1,h2,h3,h4,h5,h6{
 .img-responsive {
   width: 100%;
 }
+.add-icon {
+  padding-left: 20px;
+}
+.add-icon li {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.add-icon li:before {
+  font-family: 'Line Awesome Brands';
+  content: "\f299";
+  background-size: 10px 20px;
+  display: inline-block;
+  padding-right: 3px;
+  vertical-align: middle;
+  position: absolute;
+  left: 15px;
+  color: #8dc63f;
+}
 .mt-5{
    margin-top: 5px !important;
 }
