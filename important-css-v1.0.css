@@ -19,6 +19,7 @@
 15.over text with...
 16.Test Shadow
 17.logo css
+18.navbar-center
 -----------------------------------------------------
 */
 /*
@@ -347,3 +348,15 @@ content:"";
       max-width: 100%;
     }
   }
+
+/*
+-------------------------------------
+18.navbar-center
+Note: add this class 'navbar-center' just after 'navbar-nav'
+-------------------------------------
+*/
+.navbar-nav.navbar-center {
+  position: relative;
+  left: 50%;
+  transform: translatex(-50%);
+}
