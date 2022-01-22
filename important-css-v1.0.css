@@ -20,6 +20,7 @@
 16.Test Shadow
 17.logo css
 18.navbar-center
+19. Owl nav adjust
 -----------------------------------------------------
 */
 /*
@@ -364,3 +365,33 @@ Note: add this class 'navbar-center' just after 'navbar-nav'
   left: 50%;
   transform: translatex(-50%);
 }
+
+/*
+-------------------------------------
+19. Owl nav adjust
+-------------------------------------
+*/
+-------------------------
+1. Both arrow Right Site
+-------------------------
+.owl-slider{
+	.owl-nav{
+	  position: absolute;
+	  bottom: 50px;
+	  transition: 0.3s;
+	  height: 1px;
+	  width: 100px;
+	  right: 20px;
+	  .owl-prev, .owl-next{
+	  	i{
+	  		font-size: 30px;
+	  	}
+	  	&:hover{
+		  	background:transparent;
+		  	color: @primary-color;
+		  }
+	  }
+	}
+}
+
+-------------------------
