@@ -21,6 +21,7 @@
 17.logo css
 18.navbar-center
 19. Owl nav adjust
+20. Image property
 -----------------------------------------------------
 */
 /*
@@ -394,4 +395,15 @@ Note: add this class 'navbar-center' just after 'navbar-nav'
 	}
 }
 
--------------------------
+
+/*
+-------------------------------------
+20. Image property
+-------------------------------------
+*/
+
+img {
+    max-width: 400px;
+    height: 300px;
+    object-fit: cover;
+}
