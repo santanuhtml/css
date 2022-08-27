@@ -24,6 +24,9 @@
 20. Image property
 21. mix-blend-mode: exclusion;
 22. container-wide
+23. em
+24. Flex
+25. Grid
 -----------------------------------------------------
 */
 /*
@@ -441,3 +444,131 @@ img {
     margin-right: -15px !important;
   }
 }
+
+
+/*
+-------------------------------------
+23. em
+-------------------------------------
+*/
+Introduction of em:
+body{
+font-size:15px;
+  @media only screen and (max-width : 480px) {
+     font-size: 14px;
+  }
+}
+h1{
+font-size:4em; 
+}
+/* 15x4 = 60px;  
+   on mobile view it will be
+   14x4 = 56px;
+*/
+
+
+
+/*
+-------------------------------------
+24. Flex
+-------------------------------------
+*/
+
+flex:
+In flex items are flexible with the same length and 
+not depend on content.
+------------
+display: flex;
+------------
+Features:
+1. flex: 1|2|25%|50%;
+
+2. flex-wrap:
+   Make the flexible items wrap if necessary
+   values:
+   flex-wrap: nowrap|wrap|wrap-reverse;
+
+3. flex-direction:
+   Set the direction of the flexible items
+   values:
+   flex-direction: row | column | row-reverse|column-reverse;
+
+Example:
+HTML
+---------
+<div class="flex-container">
+  <div class="flex-item">1</div>
+  <div class="flex-item" style="background:#ddd">2</div>
+</div>
+---------
+CSS
+---------
+*{
+  box-sizing: border-box;
+}
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.flex-item{
+  background-color: #f1f1f1;
+  padding: 0px 30px;
+  flex: 50%;
+}
+@media (max-width: 767px) {
+  .flex-container {
+    flex-direction: column;
+  }
+}
+---------
+
+/*
+-------------------------------------
+25. Grid
+-------------------------------------
+*/
+
+Grid:
+1. display: grid; /* Introducing Grid */
+2. grid-template-columns: auto auto auto; /* Number of colums 3 dependent on content */
+4. grid-template-columns: repeat(3, 1fr); /* Number of colums 3 independent on content */
+5.
+.item1 {
+  grid-row: span 2;
+}
+
+Example:
+HTML
+---------
+<div class="grid-container">
+  <div class="item1">1</div>
+  <div class="item2">2</div>
+  <div class="item3">3</div>  
+  <div class="item4">4</div>
+  <div class="item5">5</div>
+  <div class="item6">6</div>
+  <div class="item7">7</div>
+  <div class="item5">5</div>
+</div>
+---------
+CSS
+---------
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+}
+.grid-container > div {
+  background-color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+.item1 {
+  grid-row: span 2;
+}
+---------
