@@ -27,6 +27,7 @@
 23. em
 24. Flex
 25. Grid
+26. Add Font
 -----------------------------------------------------
 */
 /*
@@ -571,4 +572,32 @@ CSS
 .item1 {
   grid-row: span 2;
 }
+---------
+
+/*
+-------------------------------------
+26. Add Font
+-------------------------------------
+*/
+@font-face {
+  font-family: 'GeneralSans';
+  src: url('../fonts/GeneralSans-Variable.woff2') format('woff2'),
+       url('../fonts/GeneralSans-Variable.woff') format('woff'),
+       url('../fonts/GeneralSans-Variable.ttf') format('truetype');
+       font-weight: 200 700;
+       font-display: swap;
+       font-style: normal;
+}
+
+@font-face {
+    font-family: 'Harmony';
+    src: url('../fonts/harmony.woff2') format('woff2'),
+         url('../fonts/harmony.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@body-font: 'GeneralSans', sans-serif;
+@head-font: 'Harmony', serif;
+
 ---------
