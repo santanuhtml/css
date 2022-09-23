@@ -28,6 +28,7 @@
 24. Flex
 25. Grid
 26. Add Font
+27. click link below a higher z-index div
 -----------------------------------------------------
 */
 /*
@@ -604,4 +605,9 @@ CSS
 @body-font: 'GeneralSans', sans-serif;
 @head-font: 'Harmony', serif;
 
----------
+/*
+-------------------------------------
+27. click link below a higher z-index div
+-------------------------------------
+*/
+pointer-events: none;
