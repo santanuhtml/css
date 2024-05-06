@@ -3,7 +3,7 @@ Flex box
 -------------------------
 1. Basic
 2. Others Property
-3. Others
+3. Order
 4. Overflow trick
 -------------------------
 1. Basic
@@ -126,6 +126,3 @@ output
     float: left;
 }
 </style>
-
-
-
